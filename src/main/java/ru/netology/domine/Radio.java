@@ -51,25 +51,25 @@ public class Radio {
         return currentVolume;
     }
 
-    public void setCurrentVolume(int currentVolume) {//  Установить уровень звука
-        if (currentVolume < minVolume) {// Если меньше минимума
+    public void setCurrentVolume(int currentVolume) {
+        if (currentVolume < minVolume) {
             return;
         }
-        if (currentVolume > maxVolume) {//  Если больше максимума (в конструкторе)
+        if (currentVolume > maxVolume) {
             return;
         }
         this.currentVolume = currentVolume;
     }
 
-    public void volumeUp() {//  Громкость +1
-        if (currentVolume == maxVolume) { // Если равна Max
+    public void volumeUp() {
+        if (currentVolume == maxVolume) {
             return;
         }
         this.currentVolume = currentVolume + 1;
     }
 
-    public void volumeDown() {//  Громкость -1
-        if (currentVolume == minVolume) {   //  Если равна Min
+    public void volumeDown() {
+        if (currentVolume == minVolume) {
             return;
         }
         this.currentVolume = currentVolume - 1;
